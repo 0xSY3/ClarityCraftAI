@@ -1,5 +1,4 @@
 'use client'
-
 import { useState } from 'react'
 
 export interface useCopyToClipboardProps {
@@ -31,3 +30,4 @@ export function useCopyToClipboard({
 
     return { isCopied, copyToClipboard }
 }
+
