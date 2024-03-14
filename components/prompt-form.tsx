@@ -71,21 +71,25 @@ export function PromptForm({
                     rows={1}
                     value={input}
                     onChange={e => setInput(e.target.value)}
-                    placeholder="Send a message."
+                    placeholder="Message ClarityCraft..."
                     spellCheck={false}
-                    className="min-h-[60px] w-full resize-none bg-transparent px-4 py-[1.3rem] focus-within:outline-none sm:text-sm"
+                    className="min-h-[70px] w-full resize-none bg-transparent px-4 py-[1.3rem] focus-within:outline-none sm:text-sm  border-purple-500"
+                    //className="relative flex max-h-60 w-full grow flex-col overflow-hidden bg-background px-8 sm:rounded-md sm:border sm:px-12 border border-purple-500"
+
                 />
                 <div className="absolute right-0 top-3 sm:right-4">
                     <Tooltip>
                         <TooltipTrigger asChild>
-                            <Button
-                                type="submit"
-                                size="icon"
-                                disabled={isLoading || input === ''}
-                            >
-                                <IconArrowElbow />
-                                <span className="sr-only">Send message</span>
-                            </Button>
+                        <Button
+    type="submit"
+    size="icon"
+    disabled={isLoading || input === ''}
+    className="text-white bg-blue-700 dark:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+>
+    <IconArrowElbow />
+    <span className="sr-only">Send message</span>
+</Button>
+
                         </TooltipTrigger>
                         <TooltipContent>Send message</TooltipContent>
                     </Tooltip>

@@ -14,7 +14,7 @@ export function ExternalLink({
             <span>{children}</span>
             <svg
                 aria-hidden="true"
-                height="7"
+                height="17"
                 viewBox="0 0 6 6"
                 width="7"
                 className="opacity-70"

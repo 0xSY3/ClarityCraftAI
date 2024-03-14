@@ -10,6 +10,6 @@ export function FooterText({ className, ...props }: React.ComponentProps<'p'>) {
             )}
             {...props}
         >
-        </p>
+           </p>
     )
 }
