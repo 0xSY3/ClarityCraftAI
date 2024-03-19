@@ -22,7 +22,6 @@ Our chatbot, developed using Next.js, Vercel-AI, OpenAI, Stacks.js, and Clarinet
 To get started, you'll need to create a `.env.local`
 
 ```env.local
-
 NEXT_PUBLIC_APP_URL=
 
 # OpenAI API Key
