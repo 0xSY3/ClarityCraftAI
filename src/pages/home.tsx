@@ -2,10 +2,22 @@ import React, { useState } from "react";
 import { Button, Tabs, TextInput } from "flowbite-react";
 import { useNavigate } from "react-router-dom";
 import { SparklesCore } from "../components/sparkles";
+import { TypewriterEffectSmooth } from "../components/typewriter-effect";
+import { TypewriterEffectSmoothDemo } from "../components/navbar"
 
 function Home() {
   const navigate = useNavigate();
   const [clarityField, setClarityField] = useState("");
+
+  const words = [
+    { text: "Empowering", className: "text-white" },
+    { text: "Smart Contracts:", className: "text-white" },
+    { text: "Convert,", className: "text-white" },
+    { text: "Audit,", className: "text-white" },
+    { text: "Enhance", className: "text-white" },
+    { text: "with", className: "text-white" },
+    { text: "ClarityCraft.", className: "text-blue-600 dark:text-blue-500" },
+   ];
 
   return (
     <div className="flex flex-col items-center justify-start h-screen text-center bg-black relative">
@@ -61,11 +73,13 @@ function Home() {
 
             {/* Submit button */}
             <Button
-              className="font-bold mt-4 px-3 py-1 bg-amber-500 text-white rounded-lg"
+              className="font-bold mt-4 px-3 py-1 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 rounded-lg"
+              
               onClick={() => navigate(`/ClarityBreakdown/${clarityField}`)}
             >
               SUBMIT
             </Button>
+
           </div>
         </Tabs.Item>
 
@@ -85,7 +99,7 @@ function Home() {
             ></TextInput>
             {/* Submit button below the input box */}
             <Button
-              className="font-bold mt-4 px-3 py-1 bg-amber-500 text-white rounded-lg"
+              className="font-bold mt-4 px-3 py-1 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 rounded-lg"
               onClick={() => navigate(`/ClarityConvert/${clarityField}`)}
             >
               SUBMIT
@@ -107,7 +121,7 @@ function Home() {
             ></TextInput>
             {/* Submit button below the input box */}
             <Button
-              className="font-bold mt-4 px-3 py-1 bg-amber-500 text-white rounded-lg"
+              className="font-bold mt-4 px-3 py-1 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 rounded-lg"
               onClick={() => navigate(`/SolidityConvert/${clarityField}`)}
             >
               SUBMIT
@@ -122,15 +136,21 @@ function Home() {
             </p>
             {/* Input box beneath Clarity Tab */}
             <Button
-              className="font-bold mt-4 px-3 py-1 bg-amber-500 text-white rounded-lg"
+              className="font-bold mt-4 px-3 py-1 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 rounded-lg"
               onClick={() => navigate(`/ClarityAudit`)}
             >
               GO TO AUDIT
             </Button>
           </div>
+          
         </Tabs.Item>
       </Tabs.Group>
-      
+      {/* <div className="flex flex-col items-center justify-center">
+      <TypewriterEffectSmooth words={words} />
+      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
+       
+      </div>
+    </div> */}
     </div>
   );
 }
