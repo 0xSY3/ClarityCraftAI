@@ -1,19 +1,41 @@
 import React, { useState } from "react";
 import { Button, Tabs, TextInput } from "flowbite-react";
 import { useNavigate } from "react-router-dom";
+import { SparklesCore } from "../components/sparkles";
 
 function Home() {
   const navigate = useNavigate();
   const [clarityField, setClarityField] = useState("");
 
   return (
-    <div className="flex flex-col items-center justify-start h-screen text-center bg-teal-100 relative">
+    <div className="flex flex-col items-center justify-start h-screen text-center bg-black relative">
       {/* Title */}
-      <h1 className="text-8xl font-custom mb-0 mt-8 text-teal-500">Clarity Craft</h1>
-
-      <h2 className="text-xl font-light mb-8 text-teal-400">
-        Clarity in every contract
-      </h2>
+      <div className="h-[20rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+      <h1 className="md:text-7xl text-3xl lg:text-8xl font-bold text-center text-white relative z-20">
+        ClarityCraft
+      </h1>
+      <div className="w-[40rem] h-40 relative">
+        {/* Gradients */}
+        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+ 
+        {/* Core component */}
+        <SparklesCore
+          background="transparent"
+          minSize={0.4}
+          maxSize={1}
+          particleDensity={1200}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
+        />
+ 
+        {/* Radial Gradient to prevent sharp edges */}
+        <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+      </div>
+    </div>
+      
 
       {/* Tabs */}
       <Tabs.Group
@@ -24,7 +46,7 @@ function Home() {
         {/* Clarity Tab */}
         <Tabs.Item active title="Clarity Breakdown">
           <div className="flex flex-col justify-center items-center">
-            <p className="font-bold mx-auto">
+            <p className="font-bold mx-auto" style={{ color: 'white' }}>
               Enter your Clarity smart contract address and generate an
               explanation of the smart contract code
             </p>
@@ -50,7 +72,7 @@ function Home() {
         {/* Solidity Tab */}
         <Tabs.Item active title="Clarity to Solidity Converter">
           <div className="flex flex-col justify-center items-center">
-            <p className="font-bold mx-auto">
+            <p className="font-bold mx-auto"style={{ color: 'white' }}>
               Enter your Clarity smart contract address and generate an
               equivalent code in Solidity
             </p>
@@ -72,7 +94,7 @@ function Home() {
         </Tabs.Item>
         <Tabs.Item active title="Solidity to Clarity Converter">
           <div className="flex flex-col justify-center items-center">
-            <p className="font-bold mx-auto">
+            <p className="font-bold mx-auto" style={{ color: 'white' }}>
               Enter your Solidity smart contract address and generate an
               equivalent code in Clarity
             </p>
@@ -94,7 +116,7 @@ function Home() {
         </Tabs.Item>
         <Tabs.Item active title="Clarity Contract Auditing">
           <div className="flex flex-col justify-center items-center">
-            <p className="font-bold mx-auto">
+            <p className="font-bold mx-auto" style={{ color: 'white' }}>
               Audit your Clarity contract for security risks, errors, and
               quality.
             </p>
