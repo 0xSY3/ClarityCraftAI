@@ -162,7 +162,7 @@ function ClarityConvert() {
               {solidityCode ? (
                 <Button
                   onClick={handleDeploy}
-                  className="deploy-button font-bold mt-2 px-6  bg-amber-500 text-white rounded h-[64px]"
+                  className="deploy-button font-bold mt-2 px-6  text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 rounded h-[64px]"
                 >
                   {loading ? "Loading" : "Deploy Solidity Contract"}
                 </Button>

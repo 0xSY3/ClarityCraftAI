@@ -59,7 +59,7 @@ function ClarityAudit() {
               <div className="flex justify-end">
                 <Button
                   onClick={handleAudit}
-                  className="deploy-button font-bold mt-3 px-3 py-1 bg-amber-500 text-white rounded "
+                  className="deploy-button font-bold mt-3 px-3 py-1 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 rounded "
                 >
                   Submit
                 </Button>
@@ -79,7 +79,7 @@ function ClarityAudit() {
                       <div className="flex justify-end">
                         <Button
                           onClick={() => generatePDF(getTargetElement, options)}
-                          className="deploy-button font-bold mt-3 px-6 py-2 bg-amber-500 text-white rounded "
+                          className="deploy-button font-bold mt-3 px-6 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 rounded "
                         >
                           Download PDF
                         </Button>
